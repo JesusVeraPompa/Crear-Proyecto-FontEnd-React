@@ -25,7 +25,7 @@ npm install @reduxjs/toolkit react-redux
 npm install axios
 ```
 ```
-npm install -D tailwindcss postcss autoprefixer
+npm install -D tailwindcss@3 postcss autoprefixer
 ```
 ```
 npx tailwindcss init -p
