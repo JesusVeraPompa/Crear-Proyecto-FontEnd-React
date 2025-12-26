@@ -30,10 +30,21 @@ npm install -D tailwindcss@3 postcss autoprefixer
 ```
 npx tailwindcss init -p
 ```
-- Dentro de tailwind.config.js - dentro de content: []
 ```
-"./index.html",
-"./src/**/*.{js,ts,jsx,tsx}",
+npm i @material-tailwind/react
+```
+## **4 - Cambiamos dentro del tailwind.config.js**
+```
+const withMT = require("@material-tailwind/react/utils/withMT");
+
+module.exports = withMT({
+  darkMode: "class",
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+});
 ```
 - en el Index.css = 
 ```
@@ -42,7 +53,7 @@ npx tailwindcss init -p
 @tailwind utilities;
 ```
 ==========================================================================
-## **4 - Para Ejecutar de manera Local**
+## **5 - Para Ejecutar de manera Local**
 ```
 npm run dev -- --host
 ```
